@@ -1,0 +1,97 @@
+
+Bhawna Gunwani
+
+Angular and Node
+
+-- To check if node is installed or not:
+
+	node --version
+	
+-- To check if npm is installed or not:
+
+	npm --version
+	
+-- To check if Visual Studio Code is installed or not:
+
+	code --version
+	
+-- To open visual studio Code from command prompt:	
+	
+	code .
+	
+-------------------------------------------------------
+
+-- To check whether Angular Command Interface (CLI) is installed or not:
+
+	ng --version
+	
+-- To install Angular CLI module:
+
+	npm install @angular/cli@11.2.8 --global
+	
+-------------------------------------------------------
+
+Steps to generate angular project:
+
+	> ng new angular-dayone-project
+	
+	> cd angular-dayone-project
+
+	> ng serve -o
+
+Error: Cannot find module '@angular-devkit/build-angular/package.json'	
+	
+	> npm install --only=dev
+	
+	> ng serve -o
+	
+-------------------------------------------------------
+
+-- To Stop your already running angular project:
+
+	ctrl + C
+	
+-------------------------------------------------------
+	
+Angular:
+
+	- A client-side JavaScript Framework.
+	- Angular is a component based framework.
+	- Every Angular Application has at least one Root Component.
+	- Angular helps in managing MVC Framework.
+	- Helps in improving the user interface.
+	- Supports Data Binding.
+	- Helps in creating Single-Page Application.
+	- Helps in Dependency Injection.
+	- We can create our own dependencies.
+	- Helps in consuming the RestAPIs.
+	
+-------------------------------------------------------
+
+How does angular bootstrapped or executed?
+
+	1. When you run angular application using ng serve, it goes to angular.json
+	2. Look out for index property and check the component that is rendering.
+	3. To check the root component, go to angular.json and look out for main property
+	4. Check the bootstrap module rendering in main.ts
+	5. Check the Bootstrap array to go to Root Component.
+	6. Go to the Root Component i.e. AppComponent and check template i.e. HTML.
+	
+-------------------------------------------------------
+
+	ng generate component customer
+
+-------------------------------------------------------
+
+	1. Interpolation Binding - {{}}
+	2. Property Binding (Component/Model to View) - []
+	3. Event Binding - ()
+	4. Two-Way Data Binding - [()]
+
+-------------------------------------------------------
+
+
+
+
+
+
