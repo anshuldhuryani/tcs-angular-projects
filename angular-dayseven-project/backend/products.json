@@ -1,0 +1,24 @@
+{
+  "products": [
+    {
+      "id": 103,
+      "name": "",
+      "price": ""
+    },
+    {
+      "id": 104,
+      "name": "Printer",
+      "price": "3400"
+    },
+    {
+      "id": 105,
+      "name": "Airpod H2",
+      "price": "70000"
+    },
+    {
+      "id": 106,
+      "name": "",
+      "price": 0
+    }
+  ]
+}

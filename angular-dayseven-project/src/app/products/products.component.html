@@ -1,0 +1,21 @@
+<a routerLink='/product-add' class="btn btn-secondary">Add New Product</a>
+<br />
+<h3>Product List</h3>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of productList">
+            <td>{{ product.id }}</td>
+            <td>{{ product.name }}</td>
+            <td>
+                <a [routerLink]="['/product-detail', product.id]" class="btn btn-secondary">View Details</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

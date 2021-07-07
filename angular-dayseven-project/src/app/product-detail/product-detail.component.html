@@ -1,0 +1,28 @@
+<div class="card">
+    <div class="card-header">
+        <b>Details of {{ product.name }}</b>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Product Id</th>
+                    <td>{{ product.id }}</td>
+                </tr>
+                <tr>
+                    <th>Product Name</th>
+                    <td>{{ product.name }}</td>
+                </tr>
+                <tr>
+                    <th>Product Price</th>
+                    <td>{{ product.price }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer">
+        <a class="btn btn-secondary" routerLink='/products'>Go Back</a> |
+        <a class="btn btn-secondary" [routerLink]="['/product-update', product.id]">Update</a> |
+        <a class="btn btn-secondary" (click)="deleteProduct()">Delete</a>
+    </div>
+</div>

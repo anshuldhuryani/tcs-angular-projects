@@ -1,0 +1,102 @@
+<div class="card">
+    <div class="card-header">
+        Template Driven Form Demo
+    </div>
+    <div class="card-body">
+        <form name="form" [mustMatch]="['password', 'confirmPassword']" (ngSubmit)="custForm.form.valid && onSubmit()"
+            #custForm="ngForm" novalidate>
+            <div class="mb-3">
+                <input type="text" name="name" #name="ngModel" [(ngModel)]="customer.name" class="form-control"
+                    placeholder="Customer Name" [ngClass]="{ 'is-invalid': name.touched && name.invalid }" required>
+                <div *ngIf="name.touched && name.invalid" class="invalid-feedback">
+                    <div *ngIf="name.errors.required">
+                        Customer Name is Required.
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <input type="email" name="email" #email="ngModel" [(ngModel)]="customer.email" class="form-control"
+                    placeholder="Cu stomer Email" [ngClass]="{ 'is-invalid': email.touched && email.invalid }" required
+                    email>
+                <div *ngIf="email.touched && email.invalid" class="invalid-feedback">
+                    <div *ngIf="email.errors.required">
+                        Customer Email is Required.
+                    </div>
+                    <div *ngIf="email.errors.email">
+                        Customer Email is not valid.
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <input type="text" name="amount" #amount="ngModel"
+                    [ngClass]="{ 'is-invalid': amount.touched && amount.invalid }" [(ngModel)]="customer.amount"
+                    class="form-control" placeholder="Customer Amount" required>
+                <div *ngIf="amount.touched && amount.invalid" class="invalid-feedback">
+                    <div *ngIf="amount.errors.required">
+                        Customer Amount is Required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <input type="date" name="dob" #dob="ngModel" [ngClass]="{ 'is-invalid': dob.touched && dob.invalid }"
+                    [(ngModel)]="customer.dob" class="form-control" placeholder="Customer Date of Birth" required>
+                <div *ngIf="dob.touched && dob.invalid" class="invalid-feedback">
+                    <div *ngIf="dob.errors.required">
+                        Date of Birth is Required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <input type="password" name="password" #password="ngModel"
+                    [ngClass]="{ 'is-invalid': password.touched && password.invalid }" [(ngModel)]="customer.password"
+                    class="form-control" placeholder="Enter Password" required minlength="6" maxlength="10">
+                <div *ngIf="password.touched && password.invalid" class="invalid-feedback">
+                    <div *ngIf="password.errors.required">
+                        Password is required.
+                    </div>
+                    <div *ngIf="password.errors.minlength">
+                        Password must be 6 characters long.
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <input type="password" name="confirmPassword" #confirmPassword="ngModel"
+                    [ngClass]="{ 'is-invalid': confirmPassword.touched && confirmPassword.invalid }"
+                    [(ngModel)]="customer.confirmPassword" class="form-control" placeholder="Enter Confirm Password"
+                    required>
+                <div *ngIf="confirmPassword.touched && confirmPassword.invalid" class="invalid-feedback">
+                    <div *ngIf="confirmPassword.errors.required">
+                        Confirm Password is required.
+                    </div>
+                    <div *ngIf="confirmPassword.errors.mustMatch">
+                        Passwords must match.
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <input type="checkbox" name="acceptTerms" #acceptTerms="ngModel"
+                    [ngClass]="{ 'is-invalid': acceptTerms.touched && acceptTerms.invalid }"
+                    [(ngModel)]="customer.acceptTerms" required> Accept Terms and Conditions
+                <div *ngIf="acceptTerms.touched && acceptTerms.invalid" class="invalid-feedback">
+                    <div *ngIf="acceptTerms.errors.required">
+                        Please Aceepts Terms & Conditions
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="mb-3">
+                <input type="submit" value="Add Customer" [disabled]="!custForm.form.valid"
+                    class="btn btn-success btn-sm" /> |
+                <input type="reset" value="Clear All" class="btn btn-danger btn-sm" />
+            </div>
+        </form>
+    </div>
+    <div class="card-footer">
+        Footer Here
+    </div>
+</div>
