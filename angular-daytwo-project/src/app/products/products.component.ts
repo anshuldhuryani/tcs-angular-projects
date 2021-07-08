@@ -32,7 +32,7 @@ export class ProductsComponent implements OnInit {
       this.showProducts = true;
   }
 
-  addToCart(product) {
+  addToCart(product: Product) {
     if (this.productList.indexOf(product) == -1) {
       this.productList.push(product);
 

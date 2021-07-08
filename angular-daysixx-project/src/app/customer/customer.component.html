@@ -1,0 +1,44 @@
+<div class="card">
+    <div class="card-header">
+        Template Driven Form Demo
+    </div>
+    <div class="card-body">
+        <form name="form" (ngSubmit)="custForm.form.valid && onSubmit()" #custForm="ngForm" novalidate>
+            <div class="mb-3">
+                <input type="text" name="name" #name="ngModel" [(ngModel)]="customer.name" class="form-control"
+                    placeholder="Customer Name" required>
+                <div *ngIf="name.touched && name.invalid">
+                    <div *ngIf="name.errors.required">
+                        Customer Name is Required.
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <input type="email" name="email" #email="ngModel" [(ngModel)]="customer.email" class="form-control"
+                    placeholder="Customer Email" required>
+                <div *ngIf="email.touched && email.invalid">
+                    <div *ngIf="email.errors.required">
+                        Customer Email is Required.
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <input type="text" name="amount" #amount="ngModel" [(ngModel)]="customer.amount" class="form-control"
+                    placeholder="Customer Amount" required>
+                <div *ngIf="amount.touched && amount.invalid">
+                    <div *ngIf="amount.errors.required">
+                        Customer Amount is Required.
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <input type="submit" value="Add Customer" [disabled]="!custForm.form.valid"
+                    class="btn btn-success btn-sm" /> |
+                <input type="reset" value="Clear All" class="btn btn-danger btn-sm" />
+            </div>
+        </form>
+    </div>
+    <div class="card-footer">
+        Footer Here
+    </div>
+</div>

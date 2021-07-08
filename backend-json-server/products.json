@@ -1,0 +1,19 @@
+{
+    "products": [
+        {
+            "id": 101,
+            "name": "Hard Disk",
+            "price": 4000
+        },
+        {
+            "id": 102,
+            "name": "Scanner",
+            "price": 5000
+        },
+        {
+            "id": 103,
+            "name": "Wireless Keyboard",
+            "price": 900
+        }
+    ]
+}

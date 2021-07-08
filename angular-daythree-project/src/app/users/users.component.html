@@ -1,0 +1,69 @@
+<p>users works!</p>
+
+<!-- <h3>Text Pipes:</h3>
+<p>First Name: {{ userObj.firstName | lowercase }}</p>
+<p>Last Name: {{ userObj.lastName | uppercase }}</p>
+<p>Full Name: {{ userObj.firstName + ' ' + userObj.lastName | titlecase }}</p> -->
+
+<!-- <h3>Currency Pipes:</h3>
+<p>Salary: {{ userObj.salary }}</p>
+<p>Salary: {{ userObj.salary | currency }}</p>
+<p>Salary: {{ userObj.salary | currency:'INR' }}</p>
+<p>Salary: {{ userObj.salary | currency:'INR':'code' }}</p>
+<p>Salary: {{ userObj.salary | currency:'INR':'symbol':'4.2-3' }}</p> -->
+
+<!-- <h3>Number Pipes:</h3>
+<p>Salary: {{ userObj.salary | number }}</p>
+<p>Salary: {{ userObj.salary | number:'7.1-2' }}</p> -->
+
+<!-- <h3>Percent Pipes</h3>
+<p>Bonus: {{ userObj.bonus }}</p>
+<p>Bonus: {{ userObj.bonus | percent }}</p> -->
+
+<!-- <h3>Date Pipes:</h3>
+<p>Bonus: {{ userObj.dateOfBirth }}</p>
+<p>Bonus: {{ userObj.dateOfBirth | date }}</p>
+<p>Bonus: {{ userObj.dateOfBirth | date:'short' }}</p>
+<p>Bonus: {{ userObj.dateOfBirth | date:'medium' }}</p>
+<p>Bonus: {{ userObj.dateOfBirth | date:'long' }}</p>
+<p>Bonus: {{ userObj.dateOfBirth | date:'shortDate' }}</p>
+<p>Bonus: {{ userObj.dateOfBirth | date:'mediumDate' }}</p>
+<p>Bonus: {{ userObj.dateOfBirth | date:'longDate' }}</p>
+<p>Bonus: {{ userObj.dateOfBirth | date:'shortTime' }}</p>
+<p>Bonus: {{ userObj.dateOfBirth | date:'mediumTime' }}</p>
+<p>Bonus: {{ userObj.dateOfBirth | date:'longTime' }}</p> -->
+
+<!-- <h3>Json Pipe:</h3>
+<p>{{ userObj | json}}</p> -->
+
+<!-- <h3>Slice Pipe:</h3>
+<p>{{ userObj.hobbies }}</p>
+<ul *ngFor="let hobby of userObj.hobbies | slice: 2:3">
+    <li>{{ hobby }}</li>
+</ul> -->
+
+<!-- <h3>Custom Pipe</h3>
+<p>{{ userObj.firstName | greeting:'Doctor' }}</p>
+<p>{{ userObj.firstName | greeting:'Engineer' }}</p>
+<p>{{ userObj.firstName | greeting }}</p>
+<h3>Chaining Pipes</h3>
+<h3>{{ userObj.firstName | greeting:'Trainer' | uppercase }}</h3> -->
+
+<h3>User List</h3>
+
+<table cellpadding="10" cellspacing="0" border="1">
+    <thead>
+        <tr appHighlight>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of userList">
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.age }}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,38 @@
+<div class="card">
+    <div class="card-header">
+        Reactive Forms Demo
+    </div>
+    <div class="card-body">
+        <form [formGroup]="supplierForm" (ngSubmit)="onSubmit()" novalidate>
+            <div class="mb-3">
+                <input type="text" name="name" formControlName="name" [(ngModel)]="supplier.name" class="form-control"
+                    placeholder="Supplier Name">
+                <div *ngIf="f.name.touched && f.name.invalid">
+                    <div *ngIf="f.name.errors.required">Name is Required.</div>
+                    <div *ngIf="f.name.errors.minlength">Minimum 4 characters are required.</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <input type="email" name="email" formControlName="email" [(ngModel)]="supplier.email"
+                    class="form-control" placeholder="Supplier Email">
+                <div *ngIf="f.email.touched && f.email.invalid">
+                    <div *ngIf="f.email.errors.required">Email is Required.</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <input type="text" name="amount" formControlName="amount" [(ngModel)]="supplier.amount"
+                    class="form-control" placeholder="Supplier Amount">
+                <div *ngIf="f.amount.touched && f.amount.invalid">
+                    <div *ngIf="f.amount.errors.required">Amount is Required.</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <input type="submit" value="Add Supplier" class="btn btn-success btn-sm" /> |
+                <input type="reset" value="Clear All" class="btn btn-danger btn-sm" />
+            </div>
+        </form>
+    </div>
+    <div class="card-footer">
+        Footer Here
+    </div>
+</div>
